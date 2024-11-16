@@ -1,0 +1,87 @@
+.address {
+  display: block;
+  margin: auto;
+  height: 30px;
+  width: 330px;
+  text-align: center;
+}
+.modalbg {
+  width: 100vw;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  
+}
+
+.Container {
+  width: 500px;
+  height: 200px;
+  border-radius: 12px;
+  background-color: rgba(41, 74, 53, 0.536);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: fixed;
+}
+
+.Container {
+  display: inline-block;
+  text-align: center;
+}
+.cb {
+  --color: #01100c;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  margin: 10px;
+ }
+ 
+ .cb::before, .cb::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+  padding: 5px 10px;
+ }
+ 
+ .cb::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .cb::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .cb:hover::before, .cb:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .cb:hover {
+  color: rgb(120, 161, 175);
+ }
+ 
+ .cb:active {
+  filter: brightness(.8);
+ }
